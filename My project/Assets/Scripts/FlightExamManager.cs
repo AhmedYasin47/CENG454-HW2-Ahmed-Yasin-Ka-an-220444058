@@ -34,4 +34,19 @@ public class FlightExamManager : MonoBehaviour
         missionText.color = Color.red;
         threatCleared = false;
     }
+
+    public void CompleteMission()
+    {
+        if (threatCleared == true)
+        {
+            missionComplete = true;
+            missionText.text = "MISSION COMPLETE! EXCELLENT FLIGHT.";
+            missionText.color = Color.blue;
+        }
+        else
+        {
+            missionText.text = "LANDING DENIED! CLEAR THE THREAT FIRST.";
+            missionText.color = Color.yellow;
+        }
+    }
 }
