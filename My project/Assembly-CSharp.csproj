@@ -49,7 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\DangerZoneController.cs" />
+    <Compile Include="Assets\Scripts\MissileLauncher.cs" />
+    <Compile Include="Assets\Scripts\AircraftThreatHandler.cs" />
     <Compile Include="Assets\EDEN_Populator\Scripts\EDEN_Terrain_Populator.cs" />
+    <Compile Include="Assets\Scripts\MissileHoming.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\FlightController.cs" />
     <Compile Include="Assets\Scripts\FlightExamManager.cs" />
