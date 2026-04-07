@@ -674,7 +674,7 @@ MonoBehaviour:
   pitchSpeed: 45
   yawSpeed: 45
   rollSpeed: 45
-  thrustSpeed: 13
+  thrustSpeed: 40
 --- !u!114 &282659966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1267,6 +1267,7 @@ GameObject:
   - component: {fileID: 769120027}
   - component: {fileID: 769120026}
   - component: {fileID: 769120025}
+  - component: {fileID: 769120029}
   m_Layer: 0
   m_Name: LandingArea
   m_TagString: Landing Area
@@ -1289,7 +1290,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1372,6 +1373,19 @@ Transform:
   - {fileID: 1151768687}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &769120029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769120024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 235f2976c65329b4dab70a06b75d277d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LandingZoneController
+  examManager: {fileID: 799784107}
 --- !u!1 &799784106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,6 +2621,8 @@ MonoBehaviour:
   missileLauncher: {fileID: 882011270}
   missileDelay: 5
   warningAudioSource: {fileID: 1841722759}
+  solidMaterial: {fileID: 2100000, guid: 1bad164a33afa6043ab02b858426dd7a, type: 2}
+  glassMaterial: {fileID: 2100000, guid: 7e6411be4b05e8f41968c75c9b529173, type: 2}
 --- !u!135 &1841722755
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2653,7 +2669,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9de28cc5625b8794296d7586bcf93aef, type: 2}
+  - {fileID: 2100000, guid: 1bad164a33afa6043ab02b858426dd7a, type: 2}
+  - {fileID: 2100000, guid: 7e6411be4b05e8f41968c75c9b529173, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
