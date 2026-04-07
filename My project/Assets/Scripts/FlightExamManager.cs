@@ -27,4 +27,11 @@ public class FlightExamManager : MonoBehaviour
         missionText.text = "Threat Cleared! Safe to Land.";
         missionText.color = Color.green;
     }
+
+    public void MissionFailed()
+    {
+        missionText.text = "MISSION FAILED! YOU WERE HIT.";
+        missionText.color = Color.red;
+        threatCleared = false;
+    }
 }
